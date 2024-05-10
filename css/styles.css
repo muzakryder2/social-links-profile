@@ -17,7 +17,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   font-family: 'Inter', sans-serif;
-  background-color: var(--darkGrey);
+  background-color: var(--offBlack);
   color: #ffffff;
   width: 100vw;
   height: 100vh;
@@ -33,7 +33,7 @@ a {
 }
 
 .card {
-  background-color: var(--grey);
+  background-color: var(--darkGrey);
   padding: 2rem;
   border-radius: 0.5rem;
   display: flex;
@@ -41,7 +41,8 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  width: 325px;
+  max-width: 400px;
+  min-width: 350px;
 }
 
 .card-top {
@@ -51,27 +52,27 @@ a {
   justify-content: center;
 
   .card-top__avatar {
-    width: 80px;
+    width: 100px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1.5rem;
   }
 
   .card-top__name {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 0.3rem;
   }
 
   .card-top__location {
     color: var(--primaryGreen);
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 400;
   }
 
   .card-top__subheading {
     color: #c7c7c7;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     margin: 1.5rem auto 0.5rem auto;
   }
 }
@@ -85,15 +86,15 @@ a {
   gap: 0.8rem;
 
   button {
-    padding: 10px;
+    padding: 1rem;
     border-radius: 0.5rem;
-    background: #464646;
+    background: var(--grey);
     color: var(--white);
     border: none;
     outline: none;
     font-family: inherit;
     width: 100%;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 400;
     cursor: pointer;
 
@@ -122,7 +123,7 @@ a {
     background: #464646;
     color: var(--white);
   }
-  50% {
+  25% {
     color: var(--offBlack);
     font-weight: 600;
   }
@@ -140,6 +141,10 @@ a {
   }
 
   .card {
-    width: 300px;
+    width: 90%;
+
+    .card-top__subheading {
+      font-size: 0.75rem;
+    }
   }
 }
