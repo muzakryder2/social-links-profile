@@ -1,0 +1,145 @@
+:root {
+  --primaryGreen: hsl(75, 94%, 57%);
+  --white: #ffffff;
+  --grey: #333333;
+  --darkGrey: #1f1f1f;
+  --offBlack: #141414;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--darkGrey);
+  color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  font-size: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  background-color: var(--grey);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 325px;
+}
+
+.card-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .card-top__avatar {
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-top__name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+
+  .card-top__location {
+    color: var(--primaryGreen);
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+
+  .card-top__subheading {
+    color: #c7c7c7;
+    font-size: 0.75rem;
+    margin: 1.5rem auto 0.5rem auto;
+  }
+}
+
+.card-socials {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  button {
+    padding: 10px;
+    border-radius: 0.5rem;
+    background: #464646;
+    color: var(--white);
+    border: none;
+    outline: none;
+    font-family: inherit;
+    width: 100%;
+    font-size: 0.7rem;
+    font-weight: 400;
+    cursor: pointer;
+
+    &:hover {
+      /* background-color: var(--primaryGreen); */
+      color: var(--offBlack);
+      animation: color-change 1s linear alternate both;
+    }
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  right: 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@keyframes color-change {
+  0% {
+    background: #464646;
+    color: var(--white);
+  }
+  50% {
+    color: var(--offBlack);
+    font-weight: 600;
+  }
+  100% {
+    background: var(--primaryGreen);
+    color: var(--offBlack);
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    align-items: start;
+    padding-top: 6rem;
+  }
+
+  .card {
+    width: 300px;
+  }
+}
